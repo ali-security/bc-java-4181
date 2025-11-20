@@ -6,3 +6,5 @@ before_install:
   - unzip -qq /tmp/gradle-6.9.4-bin.zip -d /tmp
   - export GRADLE_HOME=/tmp/gradle-6.9.4
   - export PATH=$GRADLE_HOME/bin:$PATH
+script:
+  - travis_wait 30 gradle build --info
